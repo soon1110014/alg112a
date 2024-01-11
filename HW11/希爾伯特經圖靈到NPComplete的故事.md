@@ -20,3 +20,4 @@ Church的Lambda Calculus於1936年提出，這是一種用於描述計算過程�
 2. <https://zh.wikipedia.org/wiki/%E5%93%A5%E5%BE%B7%E5%B0%94%E4%B8%8D%E5%AE%8C%E5%A4%87%E5%AE%9A%E7%90%86>
 3. <https://zh.wikipedia.org/wiki/%E5%9B%BE%E7%81%B5%E6%9C%BA>
 4. <https://zh.wikipedia.org/zh-tw/%CE%9B%E6%BC%94%E7%AE%97>
+5. <https://zh.wikipedia.org/zh-tw/NP%E5%AE%8C%E5%85%A8>
