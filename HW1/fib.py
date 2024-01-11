@@ -1,3 +1,4 @@
+#參考網址 https://zetria.tw/python/7d9a471162
 from datetime import datetime
 fib = [None]*10000
 fib[0] = 0
