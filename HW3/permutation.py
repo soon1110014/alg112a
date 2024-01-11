@@ -1,3 +1,4 @@
+#有參考老師permutation範例
 def p(e, current_p=[]):
     # 如果所有元素都在目前排列中，則列印排列
     if not e:
