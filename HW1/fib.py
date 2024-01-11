@@ -11,7 +11,7 @@ def fib_n(n):
         fib[i] = fib[i - 1] + fib[i - 2]
     return fib[n]
 
-#採用迴圈與不採用迴圈相比能更節省記憶體，提高速度
+#採用迴圈與不採用迴圈相比能更節省記憶體，提高速度，原因是迴圈只需要處理最後兩個數字。
 n = 100
 startTime = datetime.now()
 print(f'fib_n({n})={fib_n(n)}')
