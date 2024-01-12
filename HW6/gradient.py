@@ -1,5 +1,4 @@
-#梯度程式有參考老師範例，並參考網上資源<https://blog.csdn.net/u010960155/article/details/113776715>
-
+#梯度程式有參考老師範例，並參考網上資源<https://blog.csdn.net/u010960155/article/details/113776715>對後續程式進行撰寫與調整。已理解概念
 step = 0.01
 # 函數 f 對變數 p[k] 的偏微分: df / dp[k]
 def df(f, p, k):
