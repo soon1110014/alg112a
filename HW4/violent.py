@@ -1,3 +1,4 @@
+#原創
 import math
 from numpy import arange
 #暴力法
