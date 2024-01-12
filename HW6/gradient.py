@@ -13,7 +13,7 @@ def grad(f, p):
         gp[k] = df(f, p, k)
     return gp
     
-def gradDescent(f, inpt, rate, max=1000):
+def gradDescent(f, inpt, max=1000):
     p = np.array(initial_point)
     
     for i in range(max):
