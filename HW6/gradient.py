@@ -31,3 +31,7 @@ result = gradDescent(f, inpt)
 
 print("最終結果： p =", result[0], "f(p) =", result[1])
     
+#測試結果
+'''
+最終結果： p = [8. 1. 5.] f(p) = 90.0
+'''
