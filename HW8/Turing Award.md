@@ -14,6 +14,8 @@
 2. 改進反向傳播演算法
 3. 拓寬神經網路的視角
 
-## 經典論文：Backpropagation Applied to Handwritten Zip Code Recognition
+## 經典論文：
+1. Backpropagation Applied to Handwritten Zip Code Recognition
+2. Gradient-based learning applied to document recognition
 
-時間複雜度：$O((E+V)\log V)$
+
