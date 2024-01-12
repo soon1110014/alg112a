@@ -1,3 +1,4 @@
+#參考老師hillClimbing範例，有使用ChatGPT輔助
 import random, copy
 
 def neighbor(f, p, h=0.01):
