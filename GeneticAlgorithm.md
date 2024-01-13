@@ -1,4 +1,4 @@
-![image](https://github.com/soon1110014/alg112a/assets/105185732/1886c1b8-bfda-4a9a-a3e0-e2c69f696f44)# 基因演算法
+# 基因演算法
 ## 一、簡介
 
 ##### 背景：
