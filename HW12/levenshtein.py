@@ -1,4 +1,4 @@
-#程式有經由ChatGPT輔助，透過網路資源https://rust-algo.club/levenshtein_distance/理解編輯距離
+#程式有參考老師editDistance.py。透過網路資源https://rust-algo.club/levenshtein_distance/理解編輯距離
 # 遞迴
 def recursive_edit_distance(str1, str2, m, n):
     if m == 0:
