@@ -79,7 +79,7 @@ print("----------")
 ##### 1. [維基百科](https://zh.wikipedia.org/zh-tw/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95) 未剪貼
 ##### 2. 程式與測試結果複製於[網站](https://medium.com/qiubingcheng/%E4%BB%A5python%E5%AF%A6%E4%BD%9C%E5%9F%BA%E5%9B%A0%E6%BC%94%E7%AE%97%E6%B3%95-genetic-algorithm-ga-%E4%B8%A6%E8%A7%A3%E6%B1%BA%E5%B7%A5%E4%BD%9C%E6%8C%87%E6%B4%BE%E5%95%8F%E9%A1%8C-job-assignment-problem-jap-b0d7c4ad6d0f)(未修改)
 ##### 3. 曾修習過課程書籍
-#### 請參照 [基因演算法](https://github.com/soon1110014/alg112a/blob/master/GeneticAlgorithm.md)
+### 請參照 [基因演算法](https://github.com/soon1110014/alg112a/blob/master/GeneticAlgorithm.md)
 ## Hw3 : 寫出可以列舉所有排列的程式
 ##### 參考老師permutation範例，自行撰寫。
 ```
