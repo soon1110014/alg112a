@@ -239,7 +239,8 @@ gradDecent(x0, A, b, learning_rate, step)
 ```
 ## Hw7 : 用 micrograd 的反傳遞算法算梯度
 ```
-#程式複製顏駿葳同學及ChatGPT無修改，程式有看懂，反向傳遞法仍理解不足，僅透過老師提供資源約理解五成 
+#程式複製顏駿葳同學及ChatGPT無修改，程式有看懂
+#反向傳遞法仍理解不足，僅透過老師提供資源約理解五成 
 
 from engine import Value
 
@@ -486,3 +487,82 @@ x=5 y=5
 ```
 ## Hw10 : 寫一個程式可以求解 n 次多項式
 ##### 範例 : x^2 + 1 = 0 、x^8 + 3x^2 + 1 = 0
+```
+#自行撰寫，程式參考網上資源：https://blog.csdn.net/tanlangqie/article/details/86473480
+import numpy as np
+
+def solve_polynomial(coefficients):
+    # 使用 numpy.roots 求解多項式的根
+    roots = np.roots(coefficients)
+
+    return roots
+
+# 測試
+coefficients = [1, 0, 0, 0, 0, 1] 
+result = solve_polynomial(coefficients)
+coefficients1 = [1, 0, 0, 0, 0, 0, 3, 0, 1] 
+result1 = solve_polynomial(coefficients)
+
+print("x^5 + 1 的根:", result)
+print("x^8 + 3x^2 + 1 的根:", result1)
+#測試結果
+'''
+x^5 + 1 的根: [-1.        +0.j         -0.30901699+0.95105652j -0.30901699-0.95105652j
+  0.80901699+0.58778525j  0.80901699-0.58778525j]
+  
+x^8 + 3x^2 + 1 的根: [-1.07879081e+00+0.58413455j -1.07879081e+00-0.58413455j
+  1.07879081e+00+0.58413455j  1.07879081e+00-0.58413455j
+ -2.77555756e-17+1.14345358j -2.77555756e-17-1.14345358j
+  2.77555756e-17+0.58109101j  2.77555756e-17-0.58109101j]
+'''
+```
+## 挑戰：用遞迴寫最小編輯距離
+```
+#自行撰寫程式有參考老師editDistance.py。
+#透過網路資源https://rust-algo.club/levenshtein_distance/理解編輯距離
+```
+##### 遞迴方法
+```
+def recursive_edit_distance(str1, str2, m, n):
+    if m == 0:
+        return n
+    if n == 0:
+        return m
+    if str1[m-1] == str2[n-1]:
+        return recursive_edit_distance(str1, str2, m-1, n-1) 
+    return 1 + min(
+        recursive_edit_distance(str1, str2, m, n-1),  
+        recursive_edit_distance(str1, str2, m-1, n),  
+        recursive_edit_distance(str1, str2, m-1, n-1)  
+    )
+str1 = "kitten"
+str2 = "sitting"
+recursive_result = recursive_edit_distance(str1, str2, len(str1), len(str2))
+print("遞迴法最小編輯距離:", recursive_result)
+```
+##### 動態規劃
+```
+def dp_edit_distance(str1, str2):
+    m, n = len(str1), len(str2)
+    dp = [[0] * (n + 1) for _ in range(m + 1)]
+    for i in range(m + 1):
+        dp[i][0] = i
+    for j in range(n + 1):
+        dp[0][j] = j
+    for i in range(1, m + 1):
+        for j in range(1, n + 1):
+            if str1[i-1] == str2[j-1]:
+                dp[i][j] = dp[i-1][j-1]
+            else:
+                dp[i][j] = 1 + min(dp[i][j-1], dp[i-1][j], dp[i-1][j-1])
+    return dp[m][n]
+str1 = "kitten"
+str2 = "sitting"
+dp_result = dp_edit_distance(str1, str2)
+print("動態規劃法最小編輯距離:", dp_result)
+```
+##### 測試結果
+```
+遞迴法最小編輯距離: 3
+動態規劃法最小編輯距離: 3
+```
