@@ -78,17 +78,78 @@
 ![image](https://github.com/soon1110014/alg112a/assets/105185732/6da62387-fe06-4a24-8ce4-0bde5b09a0ac)
 ![image](https://github.com/soon1110014/alg112a/assets/105185732/4b147252-416c-42f8-be7d-36336161c579)
 * 其中是調整後最大適應函數值與調整前的平均適應函數值的倍數。
+![image](https://github.com/soon1110014/alg112a/assets/105185732/8f4caab2-bdb3-4a3a-97fa-b919246f32f7)
 
+### Sigma截取
+* Forrest 建議使用族群適應函數值的變異數資訊，在做適應函數的調整前先予以前處理。其作法是將調整前的適應函數值依下列式子減去一常數值：
+![image](https://github.com/soon1110014/alg112a/assets/105185732/76932aac-d43e-4e83-90c7-b101bf44c500)
+其中參數 c 的選擇是族群適應函數值的變異數的一個倍數。「Sigma截取」可以避免調整過後的適應函數值會產生負值。
+### 乘冪調整
+* 使用乘冪的方式來調整適應函數值，使得調整過後的適應函數值是調整前的適應函數值的乘冪，如下所示：
+![image](https://github.com/soon1110014/alg112a/assets/105185732/9bf42f52-b548-42c1-8f01-062486855b49)
+## 程式
 
+def perform_crossover_operation(self):
+self.shuffle_index (self•pop_size)
+child_index = self•pop_size child2_
+_index = self-pop_
+_size+1
+count_of_crossover = int(self-crossover_size/2)
+for i in range(count_of_crossover): parent1_index = self•indexs[i]
+parent2_
+index = self. indexs[i+1]
+if(self.crossover_type == CrossoverType-Fantia]MarpedCrossoven)
+self. Pantial MannedCrossoven(parent1_index, parent2_index, child1_index, child_index)
+self.objective_values[child1_index] = self.compute_objective_value(self-chromosomes[ childi
+_index])
+self.objective_values[child2_index] = self. compute_objective_value(self. chromosomes[child2_index])
+childl_index +=2
+child2_index +=2
 
+def perform_mutation_operation(self):
+self.shuffle_index（self.pop_sizetself.crossover_size）
+child1.
+_index = self-pop_size+self.crossover_size
+for i in range(self.mutation_size):
+if(self.mutation_type==MutationType.Inversion):
+parent1]
+index = self.indexs[1]
+self.inversion_mutation(parent1
+index, childi.
+_index)
+self.objective_values[child1_ _index]
+= self.compute_objective_value(self.chromosomes[child1_index])
+child_index += 1
 
-  
-  
+def evaluate_fitness(self):
+for i, chromosome in enumerate(self.chromosomes: self-pop_size]):
+self.objective_values[i] = self.compute_objective_value(chromosome)
+min_obj_val = np.min（self.objective_values）
+max_obj_val = np. max(self.objective_values)
+range_obj_val = max_obj_val-min_obj_val
+for i,obj in enumerate(self.objective_values):
+self.fitness[i] = max(self.least_fitness_factor*range_obj_val,pow(10,-5))+
+(max_obj_val-obj)
 
+def update_best_solution (self):
+best_index = np.argmax(self.fitness)
+if(self.best_fitness<self. fitness[best_index]):
+self.best_fitness = self.fitness[best_index]
+for i,gene in enumerate(self. chromosomes[best_index]):
+self. best_chromosome[i] = gene
 
-
-
-
-
-
-
+def perform_selection (self):
+if self.selection_type == SelectionType.Deterministic:
+index = np. argsort (self.fitness)[::-1]
+elif self.selection_type == SelectionType.Stochastic;
+index = [self.do_roulette_wheel_selection(self.fitness) for i in range(self-pop_size)]
+else:
+index = self.shuffle_index(self. total_size)
+for i in range(self-pop_size): for j in range(self-number_of.
+_genes):
+self.selected_chromosomes[i][j] =
+self.chromosomes[index[i]][j]
+for i in range(self.pop_size):
+for j in range(self.number_of_genes)
+self.chromosomes[i][j] = self.selected
+_chromosomes[i][j]
