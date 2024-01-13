@@ -1,5 +1,5 @@
 #程式有經由ChatGPT輔助，經由網路資源https://rust-algo.club/levenshtein_distance/理解編輯距離
-# 遞迴法
+# 遞迴
 def recursive_edit_distance(str1, str2, m, n):
     if m == 0:
         return n
@@ -12,7 +12,7 @@ def recursive_edit_distance(str1, str2, m, n):
         recursive_edit_distance(str1, str2, m-1, n),  
         recursive_edit_distance(str1, str2, m-1, n-1)  
     )
-# 動態規劃法
+# 動態規劃
 def dp_edit_distance(str1, str2):
     m, n = len(str1), len(str2)
     dp = [[0] * (n + 1) for _ in range(m + 1)]
