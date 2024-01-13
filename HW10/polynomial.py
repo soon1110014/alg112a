@@ -1,3 +1,4 @@
+#程式參考網上資源自行撰寫：https://blog.csdn.net/tanlangqie/article/details/86473480
 import numpy as np
 
 def solve_polynomial(coefficients):
