@@ -88,7 +88,7 @@
 * 使用乘冪的方式來調整適應函數值，使得調整過後的適應函數值是調整前的適應函數值的乘冪，如下所示：
 ![image](https://github.com/soon1110014/alg112a/assets/105185732/9bf42f52-b548-42c1-8f01-062486855b49)
 ## 程式
-
+```
 def perform_crossover_operation(self):
 self.shuffle_index (self•pop_size)
 child_index = self•pop_size child2_
@@ -153,3 +153,24 @@ for i in range(self.pop_size):
 for j in range(self.number_of_genes)
 self.chromosomes[i][j] = self.selected
 _chromosomes[i][j]
+```
+## 測試結果
+```
+iteration 0 :
+[0 3 6 5 2 4 1 7]：89.30000000000001
+iteration 10 :
+[5 3 2 0 1 4 6 7]: 56.49999999999999
+iteration 20 :
+[5 3 6 0 4 1 2 7]: 48.6
+iteration 30 :
+[5 3 2 0 6 4 1 7]：44.1
+iteration 40 :
+[5 3 2 0 6 4 1 7]: 44.1
+iteration 50 :
+[5 3 2 0 6 4 1 7]: 44.1
+iteration 60 :
+[5 3 2 0 4 6 1 7]: 41.0
+```
+## 參考資源
+[基因演算法維基](https://zh.wikipedia.org/zh-tw/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95)
+[程式碼與原理參考](https://medium.com/qiubingcheng/%E4%BB%A5python%E5%AF%A6%E4%BD%9C%E5%9F%BA%E5%9B%A0%E6%BC%94%E7%AE%97%E6%B3%95-genetic-algorithm-ga-%E4%B8%A6%E8%A7%A3%E6%B1%BA%E5%B7%A5%E4%BD%9C%E6%8C%87%E6%B4%BE%E5%95%8F%E9%A1%8C-job-assignment-problem-jap-b0d7c4ad6d0f)
