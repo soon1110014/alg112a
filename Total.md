@@ -30,7 +30,7 @@ endTime = datetime.now()
 seconds = endTime - startTime
 print(f'time:{seconds}')
 '''
-## Hw2 power2n 四種實作方法
+## Hw2 : power2n 四種實作方法
 '''
 #原創
 #方法一(運算子)
