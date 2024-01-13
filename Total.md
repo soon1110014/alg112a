@@ -29,9 +29,9 @@ print(f'fib_n({n})={fib_n(n)}')
 endTime = datetime.now()
 seconds = endTime - startTime
 print(f'time:{seconds}')
-'''
+```
 ## Hw2 : power2n 四種實作方法
-'''
+```
 #原創
 #方法一(運算子)
 def p1(n):
@@ -73,9 +73,9 @@ print("----------")
 ----------
 方法四(遞迴): 8
 ----------
-'''
+```
 ## Hw3 寫出可以列舉所有排列的程式
-'''
+```
 #參考老師permutation範例，自行撰寫。
 def p(e, current_p=[]):
     # 如果所有元素都在目前排列中，則列印排列
@@ -105,4 +105,4 @@ p(elements_to_permute)
 [2, 3, 1]
 [3, 1, 2]
 [3, 2, 1]
-'''
+```
