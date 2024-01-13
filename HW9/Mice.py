@@ -1,4 +1,5 @@
-#程式參考老師java資源實作，透過網路資源：https://ithelp.ithome.com.tw/articles/10281404，理解概念。
+#程式參考老師java實作修改部分僅為python語法
+#透過網路資源：https://ithelp.ithome.com.tw/articles/10281404，理解概念。。
 def matrix_print(m):
     for row in m:
         print(row)
