@@ -589,8 +589,8 @@ Church的Lambda Calculus於1936年提出，這是一種用於描述計算過程�
 整體而言，這個故事串聯了一系列的發現，從尋找數學基礎開始，經由不完備定理、Lambda Calculus、圖靈機、語言層次結構，最終到達了NP-Complete的概念。這一過程揭示了計算的極限，同時推動了計算機科學領域的許多重要進展。
 
 參考資料：	
-1. [希爾伯特第二問題] (https://zh.wikipedia.org/zh-tw/%E5%B8%8C%E7%88%BE%E4%BC%AF%E7%89%B9%E7%AC%AC%E4%BA%8C%E5%95%8F%E9%A1%8C)
+1. [希爾伯特第二問題](https://zh.wikipedia.org/zh-tw/%E5%B8%8C%E7%88%BE%E4%BC%AF%E7%89%B9%E7%AC%AC%E4%BA%8C%E5%95%8F%E9%A1%8C)
 2. [哥德爾不完備定理](https://zh.wikipedia.org/wiki/%E5%93%A5%E5%BE%B7%E5%B0%94%E4%B8%8D%E5%AE%8C%E5%A4%87%E5%AE%9A%E7%90%86)
-3. [圖靈機] (https://zh.wikipedia.org/wiki/%E5%9B%BE%E7%81%B5%E6%9C%BA)
-4. [Λ演算] (https://zh.wikipedia.org/zh-tw/%CE%9B%E6%BC%94%E7%AE%97)
-5. [NP-Complete] (https://zh.wikipedia.org/zh-tw/NP%E5%AE%8C%E5%85%A8)
+3. [圖靈機](https://zh.wikipedia.org/wiki/%E5%9B%BE%E7%81%B5%E6%9C%BA)
+4. [Λ演算](https://zh.wikipedia.org/zh-tw/%CE%9B%E6%BC%94%E7%AE%97)
+5. [NP-Complete](https://zh.wikipedia.org/zh-tw/NP%E5%AE%8C%E5%85%A8)
