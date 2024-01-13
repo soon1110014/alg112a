@@ -7,7 +7,7 @@
 
 1996年，楊立昆加入了AT&T實驗室，成為圖像處理研究部門的領導。他協助開發的銀行支票識別系統被廣泛應用，讀取了20世紀90年代末至21世紀初全美國超過10%的支票。
 
-他因對發展結構化程式語言做出的基礎貢獻而於1972年獲得圖靈獎。
+2018年，他因在機器學習、計算機視覺、移動機器人和計算神經科學等領域的卓越貢獻而榮獲圖靈獎。
 
 ## 主要三大貢獻(經美國計算機ACM公布)
 1. 提出卷積神經網絡（CNN）
@@ -17,5 +17,6 @@
 ## 經典論文：
 1. Backpropagation Applied to Handwritten Zip Code Recognition
 2. Gradient-based learning applied to document recognition
+第二篇論文為最大宗，內容嚴謹
 
 
