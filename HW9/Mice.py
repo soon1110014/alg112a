@@ -1,4 +1,4 @@
-#程式參考老師java資源實作
+#程式參考老師java資源實作，已理解概念
 def matrix_print(m):
     for row in m:
         print(row)
