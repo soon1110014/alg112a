@@ -1,3 +1,5 @@
+#程式參考顏駿葳同學及ChatGPT，反向傳遞法仍理解不足，透過老師提供資源約理解五成 
+
 from engine import Value
 
 # Define a more complex function
