@@ -108,7 +108,7 @@ p(elements_to_permute)
 '''
 ```
 ## Hw4 : 求解方程式(x^2 - 3x + 1 = 0)
-#####暴力法
+##### 暴力法
 ```
 #原創
 import math
