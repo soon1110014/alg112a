@@ -307,7 +307,7 @@ print("Final values: a =", a.data, ", b =", b.data, ", c =", c.data)
 ```
 ## Hw8 : 選一位圖靈獎得主，詳細說明他的得獎原因
 
-##### [楊立昆](https://github.com/soon1110014/alg112a/blob/master/HW8/Turing%20Award.md)
+### 2018圖靈獎[楊立昆](https://github.com/soon1110014/alg112a/blob/master/HW8/Turing%20Award.md)
 
 ## Hw9 : 請用搜尋法求解(老鼠走迷宮、《狼、羊、甘藍菜》過河的問題、八個皇后問題)其中的一個
 #### 老鼠走迷宮
