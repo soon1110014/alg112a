@@ -22,6 +22,9 @@
 2. Gradient-based learning applied to document recognition
 ```
 ### Gradient-based learning applied to document recognition
+##### 作者：Y. Lecun; L. Bottou; Y. Bengio; P. Haffner
+##### Journals : Proceedings of the IEEE
+##### 出版日期 : 1998年11月
 ```
 
 
