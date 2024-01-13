@@ -18,7 +18,7 @@
 1. Backpropagation Applied to Handwritten Zip Code Recognition
 2. Gradient-based learning applied to document recognition
 
-## Gradient-based learning applied to document recognition
+### Gradient-based learning applied to document recognition
 
 
 
