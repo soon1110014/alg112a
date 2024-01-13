@@ -1,4 +1,4 @@
-#參考老師查表法 & 網上資源 https://zetria.tw/python/7d9a471162
+#參考老師查表法，學生撰寫for迴圈部分 & 網上資源 https://zetria.tw/python/7d9a471162
 from datetime import datetime
 fib = [None]*10000
 fib[0] = 0
