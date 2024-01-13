@@ -522,7 +522,7 @@ x^8 + 3x^2 + 1 的根: [-1.07879081e+00+0.58413455j -1.07879081e+00-0.58413455j
 ```
 ## 挑戰：用遞迴寫最小編輯距離
 
-##### 自行撰寫程式有參考老師editDistance.py。
+##### 自行撰寫程式有參考老師[editDistance.py](https://github.com/ccc112a/py2cs/blob/master/02-%E6%BC%94%E7%AE%97%E6%B3%95/02-%E6%96%B9%E6%B3%95/08-%E5%8B%95%E6%85%8B%E8%A6%8F%E5%8A%83%E6%B3%95/editDistance/editDistance.py)
 ##### 透過網路資源https://rust-algo.club/levenshtein_distance/理解編輯距離
 
 #### 遞迴方法
