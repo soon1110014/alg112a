@@ -17,6 +17,8 @@
 ## 經典論文：
 1. Backpropagation Applied to Handwritten Zip Code Recognition
 2. Gradient-based learning applied to document recognition
-第二篇論文為最大宗，內容嚴謹
+
+## Gradient-based learning applied to document recognition
+
 
 
