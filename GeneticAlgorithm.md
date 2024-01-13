@@ -12,5 +12,5 @@
 * 應用基因演算法則來解最佳化其基本精神為：將所要搜尋的所有**參數編碼**稱為染色體(chromosonl)的離散(discrete)或二元(binary)字串(string)來代表參數的值；如此隨機地重覆產生N個初始物種(字串)，然後依據求解之條件來設計適應函數(fitness function)，適應函數值高的物種將被挑選至交配池(mating pool)中，此即複製過程，再依交配及突變過程的運算，即完成一代的基因演算法則，如此重覆下去以產生適應性最強的物種。
 
 ##### 流程圖
-img style="vertical-align:middle;![image](https://github.com/soon1110014/alg112a/assets/105185732/a88d88e0-3e8a-46fc-bd0b-582168789a79)
+![image](https://github.com/soon1110014/alg112a/assets/105185732/a88d88e0-3e8a-46fc-bd0b-582168789a79)
 
