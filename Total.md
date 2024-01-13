@@ -168,3 +168,321 @@ x1: 2.618033988749895    x2: 1.0    x3: 0.3819660112525019
 可知f1、f3皆為收斂，f2為震盪
 '''
 ```
+## Hw5 : 寫一個爬山演算法程式可以找任何向量函數的山頂
+```
+#自行撰寫neighbor部分，其餘皆參考老師hillClimbing範例，使用ChatGPT輔助
+import random, copy
+
+def neighbor(f, p, h=0.01):
+    """產生鄰近的解及其高度"""
+    p1= p.copy()
+    for i in range(len(p)):
+        p1[i] = p1[i] +random.uniform(-h,h)
+    f1 = f(p1)
+    return p1, f1
+
+def hillClimbing(f, p, h=0.01):
+    failCount = 0                    
+    while (failCount < 10000):       
+        fnow = f(p)                  
+        p1, f1 = neighbor(f, p, h)
+        if f1 >= fnow:              
+            fnow = f1                
+            p = p1
+            print('p=', p, 'f(p)=', fnow)
+            failCount = 0            
+        else:                        
+            failCount = failCount + 1
+    return (p,fnow)                 
+
+def f(p):
+    return -1*(p[0]**2+p[1]**2+p[2]**2)
+
+hillClimbing(f, [2,1,3])
+```
+## Hw6 : 寫一個梯度下降法程式可以找任何向量函數的谷底
+```
+#程式未修改，程式來源：https://blog.csdn.net/u010960155/article/details/113776715
+#已理解程式邏輯與梯度下降概念
+#未修習內容參考：https://ind.ntou.edu.tw/~b0170/math/semester2/ch7/CH7.3.pdf ，能大致理解內容於程式作用
+
+import numpy as np
+import time
+ 
+def cal_grad(A, b, x):
+    left = np.dot(np.dot(A.T, A), x)
+    right = np.dot(A.T, b)
+    gradient = left - right
+    return gradient
+ 
+# iteration
+def gradDecent(x, A, b, learning_rate, step):
+    for i in range(step):
+        gradient = cal_grad(A, b, x)
+        delta = learning_rate * gradient
+        x = x - delta
+    print('近似解x = {a}'.format(a=x))
+
+A = np.array([[1.0, -2.0, 1.0], [0.0, 2.0, -8.0], [-4.0, 5.0, 9.0]])
+b = np.array([0.0, 8.0, -9.0])
+# Giveb A and b，the solution x is [29, 16, 3]
+ 
+x0 = np.array([1.0, 1.0, 1.0])
+learning_rate = 0.01
+step = 1000000
+ 
+gradDecent(x0, A, b, learning_rate, step)
+#測試結果
+'''
+近似解x = [28.98272933 15.99042465  2.99763054] 與已知正確答案相差無幾
+'''
+```
+## Hw7 : 用 micrograd 的反傳遞算法算梯度
+```
+#程式複製顏駿葳同學及ChatGPT無修改，程式有看懂，反向傳遞法仍理解不足，僅透過老師提供資源約理解五成 
+
+from engine import Value
+
+# Define a more complex function
+def my_function(a, b, c):
+    return (a**2 + b**3) * c
+
+# Initialize values
+a = Value(2)
+b = Value(3)
+c = Value(4)
+
+# Initialize parameters for the Adam optimizer
+step = 0.01
+beta1 = 0.9
+beta2 = 0.999
+epsilon = 1e-8
+
+# Initialize moment estimates
+m_a = 0
+m_b = 0
+m_c = 0
+v_a = 0
+v_b = 0
+v_c = 0
+t = 0
+
+for i in range(100):
+    # Evaluate the more complex function
+    f = my_function(a, b, c)
+    
+    # Initialize gradients to zero
+    a.grad = 0
+    b.grad = 0
+    c.grad = 0
+    
+    # Backward pass
+    f.backward()
+
+    # Update parameters using Adam optimizer
+    t += 1
+    m_a = beta1 * m_a + (1 - beta1) * a.grad
+    m_b = beta1 * m_b + (1 - beta1) * b.grad
+    m_c = beta1 * m_c + (1 - beta1) * c.grad
+    v_a = beta2 * v_a + (1 - beta2) * (a.grad ** 2)
+    v_b = beta2 * v_b + (1 - beta2) * (b.grad ** 2)
+    v_c = beta2 * v_c + (1 - beta2) * (c.grad ** 2)
+
+    m_a_hat = m_a / (1 - beta1 ** t)
+    m_b_hat = m_b / (1 - beta1 ** t)
+    m_c_hat = m_c / (1 - beta1 ** t)
+    v_a_hat = v_a / (1 - beta2 ** t)
+    v_b_hat = v_b / (1 - beta2 ** t)
+    v_c_hat = v_c / (1 - beta2 ** t)
+
+    a.data -= step * m_a_hat / (v_a_hat ** 0.5 + epsilon)
+    b.data -= step * m_b_hat / (v_b_hat ** 0.5 + epsilon)
+    c.data -= step * m_c_hat / (v_c_hat ** 0.5 + epsilon)
+
+print("Final values: a =", a.data, ", b =", b.data, ", c =", c.data)
+```
+# Hw8 : 選一位圖靈獎得主，詳細說明他的得獎原因
+```
+請參照<https://github.com/soon1110014/alg112a/blob/master/HW8/Turing%20Award.md>
+```
+# Hw9 : 請用搜尋法求解(老鼠走迷宮、《狼、羊、甘藍菜》過河的問題、八個皇后問題)其中的一個
+##### 老鼠走迷宮
+```
+#程式參考老師java實作修改部分僅為python語法
+#透過網路資源：https://ithelp.ithome.com.tw/articles/10281404，理解概念。
+def matrix_print(m):
+    for row in m:
+        print(row)
+
+def str_set(s, i, c):
+    return s[:i] + c + s[i+1:]
+
+def find_path(m, x, y):
+    print("=========================")
+    print(f"x={x} y={y}")
+    matrix_print(m)
+
+    if x >= 6 or y >= 8:
+        return False
+    if m[x][y] == '*':
+        return False
+    if m[x][y] == '+':
+        return False
+
+    if m[x][y] == ' ':
+        m[x] = str_set(m[x], y, '.')
+
+    if m[x][y] == '.' and (x == 5 or y == 7):
+        return True
+
+    if y < 7 and m[x][y+1] == ' ':  # 向右
+        if find_path(m, x, y+1):
+            return True
+    if x < 5 and m[x+1][y] == ' ':  # 向下
+        if find_path(m, x+1, y):
+            return True
+    if y > 0 and m[x][y-1] == ' ':  # 向左
+        if find_path(m, x, y-1):
+            return True
+    if x > 0 and m[x-1][y] == ' ':  # 向上
+        if find_path(m, x-1, y):
+            return True
+
+    m[x] = str_set(m[x], y, '+')
+    return False
+
+maze = ["********",
+        "** * ***",
+        "     ***",
+        "* ******",
+        "*     **",
+        "***** **"]
+
+find_path(maze, 2, 0)
+print("=========================")
+matrix_print(maze)
+#測試結果：成功走出迷宮
+'''
+=========================
+x=2 y=0
+********
+** * ***
+     ***
+* ******
+*     **
+***** **
+=========================
+x=2 y=1
+********
+** * ***
+.    ***
+* ******
+*     **
+***** **
+=========================
+x=2 y=2
+********
+** * ***
+..   ***
+* ******
+*     **
+***** **
+=========================
+x=2 y=3
+********
+** * ***
+...  ***
+* ******
+*     **
+***** **
+=========================
+x=2 y=4
+********
+** * ***
+.... ***
+* ******
+*     **
+***** **
+=========================
+x=1 y=4
+********
+** * ***
+.....***
+* ******
+*     **
+***** **
+=========================
+x=1 y=2
+********
+** *+***
+...++***
+* ******
+*     **
+***** **
+=========================
+x=3 y=1
+********
+**+*+***
+..+++***
+* ******
+*     **
+***** **
+=========================
+x=4 y=1
+********
+**+*+***
+..+++***
+*.******
+*     **
+***** **
+=========================
+x=4 y=2
+********
+**+*+***
+..+++***
+*.******
+*.    **
+***** **
+=========================
+x=4 y=3
+********
+**+*+***
+..+++***
+*.******
+*..   **
+***** **
+=========================
+x=4 y=4
+********
+**+*+***
+..+++***
+*.******
+*...  **
+***** **
+=========================
+x=4 y=5
+********
+**+*+***
+..+++***
+*.******
+*.... **
+***** **
+=========================
+x=5 y=5
+********
+**+*+***
+..+++***
+*.******
+*.....**
+***** **
+=========================
+********
+**+*+***
+..+++***
+*.******
+*.....**
+*****.**
+'''
+```
+# Hw10 : 寫一個程式可以求解 n 次多項式
+##### 範例 : x&sup5 + 1 = 0 、x&sup8 + 3x&sup2 + 1 = 0
