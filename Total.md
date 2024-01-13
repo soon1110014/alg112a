@@ -74,6 +74,8 @@ print("----------")
 方法四(遞迴): 8
 ----------
 ```
+## 期中報告
+#### 請參照 [基因演算法](https://github.com/soon1110014/alg112a/blob/master/GeneticAlgorithm.md)
 ## Hw3 : 寫出可以列舉所有排列的程式
 ##### 參考老師permutation範例，自行撰寫。
 ```
