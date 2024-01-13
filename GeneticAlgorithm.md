@@ -3,7 +3,7 @@
 ##### 學生：陳振順
 ##### 授課老師： 陳鍾誠 教授
 ##### 用途： 期中報告
-##### 參考：
+##### 參考(相關資源將於頁尾提供)：
 ##### 1. 維基百科、曾修課過的書籍內容(未剪貼)。
 ##### 2. 程式及測試結果複製於[網站](https://medium.com/qiubingcheng/%E4%BB%A5python%E5%AF%A6%E4%BD%9C%E5%9F%BA%E5%9B%A0%E6%BC%94%E7%AE%97%E6%B3%95-genetic-algorithm-ga-%E4%B8%A6%E8%A7%A3%E6%B1%BA%E5%B7%A5%E4%BD%9C%E6%8C%87%E6%B4%BE%E5%95%8F%E9%A1%8C-job-assignment-problem-jap-b0d7c4ad6d0f)(未修改)
 
