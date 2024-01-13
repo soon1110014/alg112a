@@ -242,6 +242,7 @@ gradDecent(x0, A, b, learning_rate, step)
 ```
 ## Hw7 : 用 micrograd 的反傳遞算法算梯度
 ##### 程式複製顏駿葳同學無修改以ChatGPT輔助，程式有看懂
+##### [顏駿葳同學程式來源](https://github.com/Yan7668114/alg112ahw/blob/main/07/micrograd/micrograd/micrograd510.py)
 ##### 反向傳遞法仍理解不足，僅透過老師提供資源約理解五成 
 ```
 from engine import Value
@@ -311,6 +312,7 @@ print("Final values: a =", a.data, ", b =", b.data, ", c =", c.data)
 ## Hw9 : 請用搜尋法求解(老鼠走迷宮、《狼、羊、甘藍菜》過河的問題、八個皇后問題)其中的一個
 #### 老鼠走迷宮
 ##### 程式參考老師java實作，修改部分僅為修改為python語法
+##### [老師java實作來源](https://github.com/ccc112a/py2cs/blob/master/02-%E6%BC%94%E7%AE%97%E6%B3%95/02-%E6%96%B9%E6%B3%95/06-%E6%90%9C%E5%B0%8B%E6%B3%95/Q1-mouse/%E7%BF%92%E9%A1%8C%EF%BC%9A%E4%BB%A5%E6%B7%B1%E5%BA%A6%E5%84%AA%E5%85%88%E6%90%9C%E5%B0%8B%E8%A7%A3%E6%B1%BA%E8%80%81%E9%BC%A0%E8%B5%B0%E8%BF%B7%E5%AE%AE%E5%95%8F%E9%A1%8C.md)
 ##### 透過網路資源：https://ithelp.ithome.com.tw/articles/10281404，理解概念。
 ```
 def matrix_print(m):
